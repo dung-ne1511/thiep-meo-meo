@@ -1,9 +1,3 @@
-// =================== TÙY CHỈNH NHANH ===================
-// Đặt nhạc của bạn vào assets/music/our-song.mp3.
-// Đặt ảnh vào assets/images/our-photo.jpg và memory-1.jpg, memory-2.jpg, memory-3.jpg.
-// Có thể sửa lời chúc trực tiếp trong index.html.
-// =======================================================
-
 const music = document.getElementById('backgroundMusic');
 const musicButton = document.getElementById('musicButton');
 const musicLabel = document.getElementById('musicLabel');
@@ -88,13 +82,21 @@ function openEnvelope() {
   }
 }
 envelope.addEventListener('click', openEnvelope);
-openCardButton.addEventListener('click', () => {
+openCardButton.addEventListener('click', async () => {
+  if (music.paused) {
+    try {
+      await music.play();
+    } catch (error) {
+      showToast('Nhấn nút Bật nhạc để nghe nhạc nhé 🎵');
+    }
+  }
+
   document.getElementById('letter').scrollIntoView({ behavior: 'smooth' });
+
   setTimeout(() => {
     if (!envelope.classList.contains('open')) openEnvelope();
   }, 450);
 });
-
 surpriseButton.addEventListener('click', () => {
   const isHidden = surpriseMessage.hidden;
   surpriseMessage.hidden = !isHidden;
