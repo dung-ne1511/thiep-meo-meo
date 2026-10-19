@@ -120,3 +120,23 @@ window.addEventListener('scroll', () => {
     if (effectsEnabled) makeHearts(5);
   }
 }, { passive: true });
+// Thử tự phát nhạc khi mở trang.
+window.addEventListener('load', async () => {
+  try {
+    await music.play();
+  } catch (error) {
+    // Nếu trình duyệt chặn, chờ người xem chạm hoặc nhấn vào trang.
+    const playAfterInteraction = async () => {
+      if (music.paused) {
+        try {
+          await music.play();
+        } catch (error) {
+          // Có thể file nhạc chưa tồn tại hoặc chưa tải được.
+        }
+      }
+    };
+
+    document.addEventListener('click', playAfterInteraction, { once: true });
+    document.addEventListener('touchstart', playAfterInteraction, { once: true });
+  }
+});
