@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f6">
+  <meta name="description" content="Một chiếc thiệp nhỏ dành riêng cho tiểu công chúa Meo Meo.">
+  <title>Gửi tiểu công chúa Meo Meo 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div id="hearts" class="hearts" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Về đầu trang"><span class="brand-icon">♥</span> Kỷ niệm của chúng ta</a>
+    <div class="top-actions">
+      <button id="musicButton" class="music-button" type="button" aria-pressed="false">
+        <span id="musicIcon">♫</span> <span id="musicLabel">Bật nhạc</span>
+      </button>
+      <button id="soundButton" class="icon-button" type="button" aria-label="Bật hoặc tắt hiệu ứng âm thanh">♪</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow"><span>✦</span> Một điều nhỏ xíu, dành riêng cho em</p>
+        <h1>Kỷ niệm<br><em>của chúng ta</em></h1>
+        <div class="tiny-hearts" aria-hidden="true">♡　♥　♡</div>
+        <p class="intro">Gửi tiểu công chúa Meo Meo của anh,<br>
+          cảm ơn em vì đã xuất hiện và làm những ngày bình thường trở nên thật đặc biệt.</p>
+        <button id="openCard" class="primary-button" type="button"><span>♥</span> Mở thiệp của em <span class="arrow">→</span></button>
+        <p class="micro-note">Chạm nhẹ thôi nha, công chúa nhỏ! ✨</p>
+      </div>
+      <div class="hero-art">
+        <div class="sparkle sparkle-a">✦</div><div class="sparkle sparkle-b">♡</div>
+        <div class="photo-frame hero-photo">
+          <img src="assets/images/our-photo.jpg" alt="Ảnh kỷ niệm của hai đứa" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+          <div class="photo-fallback"><span>🐱</span><b>Ảnh của chúng mình</b><small>Thay bằng ảnh riêng của hai đứa nhé!</small></div>
+        </div>
+        <div class="photo-caption">tiểu công chúa ♡<br>meo meo</div>
+        <span class="floating-heart heart-one">♥</span><span class="floating-heart heart-two">♡</span>
+      </div>
+    </section>
+
+    <section id="letter" class="letter-section section-shell" aria-labelledby="letterTitle">
+      <div class="section-heading"><span class="heading-icon">💌</span><div><p class="eyebrow">MỞ RA MỘT CHÚT YÊU THƯƠNG</p><h2 id="letterTitle">Lá thư nhỏ gửi em</h2></div></div>
+      <div class="envelope-wrap">
+        <button id="envelope" class="envelope" type="button" aria-label="Mở phong thư">
+          <span class="envelope-back"></span><span class="envelope-letter"><span>Gửi công chúa Meo Meo</span><b>♡</b></span>
+          <span class="envelope-flap"></span><span class="envelope-front"></span><span class="envelope-heart">♥</span>
+        </button>
+        <p id="envelopeHint" class="envelope-hint">Bấm vào phong thư để mở nha 💗</p>
+      </div>
+      <article id="loveLetter" class="love-letter" hidden>
+        <p class="letter-date">Gửi em, cô bé anh thương nhất 🌷</p>
+        <h3>Tiểu công chúa Meo Meo của anh,</h3>
+        <p>Có những ngày chẳng có gì đặc biệt, nhưng chỉ cần được nói chuyện với em thôi là ngày ấy đã trở nên đáng nhớ rồi.</p>
+        <p>Cảm ơn em vì những tiếng cười, những lần dỗi hờn đáng yêu và cả những khoảnh khắc nhỏ bé mà anh muốn cất giữ thật lâu. Anh không hứa lúc nào mọi thứ cũng hoàn hảo, nhưng anh muốn mình luôn biết lắng nghe, cùng nhau cố gắng và thương nhau bằng những điều chân thành nhất.</p>
+        <p>Mong rằng sau này, khi nhìn lại hôm nay, chúng mình vẫn có thể mỉm cười và nói: “May mà ngày ấy mình đã chọn nhau.”</p>
+        <p class="letter-sign">Thương em thật nhiều,<br><strong>Người luôn gọi em là công chúa ♡</strong></p>
+      </article>
+    </section>
+
+    <section id="memories" class="memories-section section-shell">
+      <div class="section-heading"><span class="heading-icon">📸</span><div><p class="eyebrow">NHỮNG ĐIỀU MUỐN GIỮ LẠI</p><h2>Góc nhỏ của chúng mình</h2></div></div>
+      <p class="section-description">Thay ba tấm hình dưới đây bằng ảnh thật của hai đứa. Những bức ảnh bình thường đôi khi lại là kỷ niệm quý nhất.</p>
+      <div class="memory-grid">
+        <figure class="memory-card rotate-left"><img src="assets/images/memory-1.jpg" alt="Kỷ niệm đầu tiên" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="memory-fallback">🌷<small>Ảnh kỷ niệm 1</small></div><figcaption>Ngày đầu tiên ♡</figcaption></figure>
+        <figure class="memory-card rotate-right"><img src="assets/images/memory-2.jpg" alt="Khoảnh khắc đáng nhớ" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="memory-fallback">🐱<small>Ảnh kỷ niệm 2</small></div><figcaption>Một ngày thật vui</figcaption></figure>
+        <figure class="memory-card rotate-left"><img src="assets/images/memory-3.jpg" alt="Một chuyến đi cùng nhau" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="memory-fallback">🌅<small>Ảnh kỷ niệm 3</small></div><figcaption>Cùng nhau đi xa hơn</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="surprise-section section-shell">
+      <div class="surprise-card">
+        <div class="gift-icon">🎁</div>
+        <p class="eyebrow">PSSST… CÓ MỘT ĐIỀU BÍ MẬT</p>
+        <h2>Em có muốn mở món quà nhỏ không?</h2>
+        <p class="section-description">Chỉ dành cho tiểu công chúa Meo Meo thôi đó.</p>
+        <button id="surpriseButton" class="primary-button" type="button">Mở bí mật <span class="arrow">→</span></button>
+        <div id="surpriseMessage" class="surprise-message" hidden>
+          <div class="big-heart">♥</div>
+          <h3>Điều ước của anh</h3>
+          <p>Anh mong em luôn được yêu thương, luôn có thật nhiều lý do để cười. Và nếu em cho phép, anh muốn là một trong những lý do ấy. 💗</p>
+          <p class="secret-signature">Ôm em một cái thật lâu! 🫶</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ending section-shell">
+      <div class="ending-stars">✦　♡　✦</div>
+      <h2>Thương em, <em>Meo Meo</em></h2>
+      <p>Mong chúng mình sẽ còn viết thêm thật nhiều trang kỷ niệm.</p>
+      <button id="celebrateButton" class="outline-button" type="button">Gửi em một trời trái tim ♥</button>
+      <p class="footer-note">Được làm bằng một chút vụng về và rất nhiều yêu thương.</p>
+    </section>
+  </main>
+
+  <audio id="backgroundMusic" src="assets/music/our-song.mp3" loop preload="none"></audio>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
